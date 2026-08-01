@@ -1,9 +1,27 @@
 aid: powertrade
 name: PowerTrade
-description: 'PowerTrade is a company surfaced as a portfolio company of pantera-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'PowerTrade (power.trade) is a crypto derivatives exchange offering European-style,
+  USDC-settled options on BTC, ETH and 80+ altcoins, plus perpetual futures, spot, and tokenized
+  equity (xStocks) options. For programmatic traders it publishes a public REST API (market
+  data, history, positions, balances), real-time WebSocket market-data and position feeds, and
+  a FIX 4.4 order-entry / drop-copy gateway. Private endpoints authenticate with an ES256 JWT
+  signed from an account API key and private key. The exchange runs production, test and dev
+  environments and provides Go, Python and TypeScript example clients on GitHub. Backed by
+  Pantera Capital.'
 url: https://raw.githubusercontent.com/api-evangelist/powertrade/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://power.trade/assets/power-trade-og.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,11 +30,69 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 tags:
 - Company
 - Crypto
-apis: []
+- Cryptocurrency
+- Derivatives
+- Options
+- Perpetual Futures
+- Trading
+- Exchange
+- Financial Services
+- WebSocket
+- FIX
+- Market Data
+apis:
+- name: PowerTrade REST API
+  description: 'Public and private REST endpoints for market-data summaries, public trade history,
+    positions, holdings, balances, reporting, and MFA. Private endpoints require an ES256 JWT
+    access token. Versioned by URI path (v1, v2).'
+  humanURL: https://power-trade.github.io/api-docs-source/rest_api.html
+  baseURL: https://api.rest.prod.power.trade
+  tags:
+  - Market Data
+  - Trading
+  - REST
+  properties:
+  - type: Documentation
+    url: https://power-trade.github.io/api-docs-source/rest_api.html
+  - type: Authentication
+    url: authentication/powertrade-authentication.yml
+  - type: ErrorCatalog
+    url: errors/powertrade-problem-types.yml
+- name: PowerTrade WebSocket Feeds
+  description: 'Real-time WebSocket market-data feeds (reference data, top-of-book, order books,
+    trades, index and settlement prices) and private position-summary feeds.'
+  humanURL: https://power-trade.github.io/api-docs-source/ws_feeds.html
+  baseURL: https://api.wss.prod.power.trade
+  tags:
+  - Market Data
+  - WebSocket
+  - Streaming
+  properties:
+  - type: Documentation
+    url: https://power-trade.github.io/api-docs-source/ws_feeds.html
+- name: PowerTrade FIX API
+  description: 'FIX 4.4 order-entry and drop-copy gateway for order management, with Go example
+    clients published on GitHub.'
+  humanURL: https://power-trade.github.io/api-docs-source/fix_order_entry.html
+  baseURL: https://api.rest.prod.power.trade
+  tags:
+  - Trading
+  - FIX
+  - Order Management
+  properties:
+  - type: Documentation
+    url: https://power-trade.github.io/api-docs-source/fix_order_entry.html
+  - type: SourceCode
+    url: https://github.com/Power-Trade/fix-api-clients
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +101,53 @@ maintainers:
 common:
 - type: Website
   url: https://power.trade/
+- type: DeveloperPortal
+  url: https://support.power.trade/api/api-overview.md
+- type: Documentation
+  url: https://power-trade.github.io/api-docs-source/
+- type: APIReference
+  url: https://power-trade.github.io/api-docs-source/rest_api.html
+- type: GettingStarted
+  url: https://support.power.trade/api/api-overview.md
+- type: Authentication
+  url: authentication/powertrade-authentication.yml
+- type: GitHubOrganization
+  url: https://github.com/Power-Trade
+- type: Support
+  url: https://support.power.trade/
+- type: Pricing
+  url: https://support.power.trade/how-to-use-powertrade/fees.md
+- type: SignUp
+  url: https://app.power.trade/
+- type: TermsOfService
+  url: https://support.power.trade/legal/legal-and-privacy-policies/terms-of-service.md
+- type: PrivacyPolicy
+  url: https://support.power.trade/legal/legal-and-privacy-policies/privacy-policy.md
+- type: Security
+  url: https://support.power.trade/legal/security/security-policy.md
+- type: LLMsTxt
+  url: llms/powertrade-llms.txt
+- type: Packages
+  url: packages/powertrade-packages.yml
+- type: SDKs
+  url: packages/powertrade-packages.yml
+- type: Authentication
+  url: authentication/powertrade-authentication.yml
+- type: Conventions
+  url: conventions/powertrade-conventions.yml
+- type: ErrorCatalog
+  url: errors/powertrade-problem-types.yml
+- type: Conformance
+  url: conformance/powertrade-conformance.yml
+- type: Lifecycle
+  url: lifecycle/powertrade-lifecycle.yml
+- type: Sandbox
+  url: sandbox/powertrade-sandbox.yml
+- type: MCPServer
+  url: mcp/powertrade-mcp.yml
+- type: WellKnown
+  url: well-known/powertrade-well-known.yml
+- type: DomainSecurity
+  url: security/powertrade-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/powertrade-vulnerability-disclosure.yml

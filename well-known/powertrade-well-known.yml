@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/* on PowerTrade hosts
+note: >-
+  No real /.well-known/ discovery documents were found. power.trade returns its single-page-app
+  HTML shell (identical 11,100-byte body) for every /.well-known/ path, which is an SPA catch-all
+  and not a genuine well-known document. The API host (api.rest.prod.power.trade) returns 403 for
+  all /.well-known/ paths. No security.txt, OpenID configuration, oauth-authorization-server,
+  api-catalog, or ai-plugin.json is published. Absence recorded as valid data.
+hosts:
+- host: https://power.trade
+  documents:
+  - {path: /.well-known/security.txt, status: 200, real: false, content_type: text/html, note: SPA fallback}
+  - {path: /.well-known/openid-configuration, status: 200, real: false, content_type: text/html, note: SPA fallback}
+  - {path: /.well-known/oauth-authorization-server, status: 200, real: false, content_type: text/html, note: SPA fallback}
+  - {path: /.well-known/api-catalog, status: 200, real: false, content_type: text/html, note: SPA fallback}
+  - {path: /.well-known/ai-plugin.json, status: 200, real: false, content_type: text/html, note: SPA fallback}
+- host: https://api.rest.prod.power.trade
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}

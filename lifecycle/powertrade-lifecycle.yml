@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source:
+- https://power-trade.github.io/api-docs-source/rest_api.html
+- https://support.power.trade/api/api-overview.md
+versioning:
+  scheme: uri-path
+  current: v1
+  additional: [v2]
+  docs: https://power-trade.github.io/api-docs-source/rest_api.html
+availability:
+  note: >-
+    The API overview states "API USE IS CURRENTLY DISABLED. PLEASE GET IN TOUCH IF YOU THINK YOU
+    NEED IT." Programmatic access is gated per account and an API License Agreement.
+  api_license_agreement: https://support.power.trade/legal/legal-and-privacy-policies/api-license-agreement.md
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support is documented.
+sla:
+  url: null
+status_page: null
+environments:
+- {name: production, rest: https://api.rest.prod.power.trade, ws: wss://api.wss.prod.power.trade/v1/feeds}
+- {name: test, rest: https://api.rest.test.power.trade, ws: wss://api.wss.test.power.trade/v1/feeds}
+- {name: dev, rest: https://api.rest.dev.power.trade}

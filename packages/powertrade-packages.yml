@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Power-Trade
+note: >-
+  PowerTrade does not publish versioned SDK packages to npm/PyPI/etc. It maintains first-party
+  example/reference client libraries in its GitHub org (Power-Trade). These are the official
+  integration starting points for the FIX and WebSocket/market-proxy APIs.
+packages:
+- language: go
+  registry: github
+  name: Power-Trade/fix-api-clients
+  url: https://github.com/Power-Trade/fix-api-clients
+  install: git clone https://github.com/Power-Trade/fix-api-clients
+  description: PowerTrade FIX API example clients and documentation (MIT).
+  official: true
+- language: typescript
+  registry: github
+  name: Power-Trade/market-proxy-client-js
+  url: https://github.com/Power-Trade/market-proxy-client-js
+  install: git clone https://github.com/Power-Trade/market-proxy-client-js
+  description: TypeScript market-proxy client library.
+  official: true
+- language: python
+  registry: github
+  name: Power-Trade/market-proxy-clients
+  url: https://github.com/Power-Trade/market-proxy-clients
+  install: git clone https://github.com/Power-Trade/market-proxy-clients
+  description: Example market-proxy clients in Python3 to aid integration.
+  official: true

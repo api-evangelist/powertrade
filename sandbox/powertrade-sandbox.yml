@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://power-trade.github.io/api-docs-source/rest_api.html
+note: >-
+  PowerTrade separates live and non-production traffic by hostname (prod/test/dev), not by key
+  prefix. Test and dev environments mirror the production REST and WebSocket surfaces for
+  integration before going live. No published magic test values (card/IBAN/token fixtures) were
+  found; account and API keys must be provisioned in the target environment.
+environments:
+- name: production
+  rest: https://api.rest.prod.power.trade
+  websocket: wss://api.wss.prod.power.trade/v1/feeds
+- name: test
+  rest: https://api.rest.test.power.trade
+  websocket: wss://api.wss.test.power.trade/v1/feeds
+- name: dev
+  rest: https://api.rest.dev.power.trade
+tooling:
+  jwt_builder: https://app.power.trade/jwt-builder
+  fix_example_clients: https://github.com/Power-Trade/fix-api-clients
+  market_proxy_clients:
+  - https://github.com/Power-Trade/market-proxy-clients
+  - https://github.com/Power-Trade/market-proxy-client-js

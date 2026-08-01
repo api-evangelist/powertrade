@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: https://power-trade.github.io/api-docs-source/rest_api.html
+docs:
+  rest: https://power-trade.github.io/api-docs-source/rest_api.html
+  websocket: https://power-trade.github.io/api-docs-source/ws_feeds.html
+  auth: https://support.power.trade/api/authentication.md
+authentication:
+  style: ES256 JWT bearer (see authentication/powertrade-authentication.yml)
+  public_endpoints_open: true
+versioning:
+  style: uri-path
+  versions: [v1, v2]
+  note: REST paths are prefixed with the version segment (e.g. /v1/history/trades, /v2/mfa/verify).
+transports:
+  rest:
+    base_url: https://api.rest.prod.power.trade
+    format: JSON
+  websocket:
+    base_url: wss://api.wss.prod.power.trade/v1/feeds
+    channels: [reference_data, market_data, per-symbol, position_summary]
+    model: pre-built snapshots + incremental updates (ob_snapshot/pb_snapshot, trade/rte_trade,
+      reference_price/settlement_price, display_order_* updates)
+  fix:
+    protocol: FIX 4.4
+    services: [order_entry, drop_copy]
+    clients: https://github.com/Power-Trade/fix-api-clients
+idempotency:
+  supported: false
+  note: No idempotency-key header/parameter is documented for the REST API. FIX order entry uses
+    client-assigned ClOrdID for order identity/dedup at the protocol level, not an HTTP idempotency key.
+pagination:
+  note: History/reporting endpoints (e.g. /v1/history/trades, /v1/reporting/balance_activity) are
+    time/cursor-parameterized; a single documented pagination envelope is not published in the HTML reference.
+error_envelope:
+  format: JSON
+  http_status_codes: [200, 401, 403]
+  reference: errors/powertrade-problem-types.yml
+rate_limiting:
+  note: No public rate-limit header/quota schedule is documented in the REST reference.
+cross_links:
+  authentication: authentication/powertrade-authentication.yml
+  errors: errors/powertrade-problem-types.yml
+  lifecycle: lifecycle/powertrade-lifecycle.yml

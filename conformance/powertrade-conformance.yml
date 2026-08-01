@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source:
+- https://power-trade.github.io/api-docs-source/rest_api.html
+- https://support.power.trade/api/authentication.md
+- https://power-trade.github.io/api-docs-source/fix_order_entry.html
+standards:
+- id: fix-4.4
+  conforms: true
+  evidence: Order entry and drop-copy gateways implement the FIX 4.4 protocol (quickfix engines).
+- id: jwt-rfc7519
+  conforms: true
+  evidence: Access tokens are JSON Web Tokens (sub/iat/exp claims).
+- id: jws-es256
+  conforms: true
+  evidence: Tokens are signed with the ES256 (ECDSA P-256 + SHA-256) algorithm.
+- id: oauth2
+  conforms: false
+  evidence: Bearer JWTs are self-signed from an account key pair; no OAuth2 authorization server is exposed.
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are plain HTTP status codes, not application/problem+json.
+- id: openapi
+  conforms: false
+  evidence: API is documented as generated HTML (AsciiDoc), no OpenAPI/Swagger document is published.
+- id: asyncapi
+  conforms: false
+  evidence: Real-time feeds are documented as WebSocket channels, no AsyncAPI document is published.

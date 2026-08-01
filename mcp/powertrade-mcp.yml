@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://power-trade.github.io/api-docs-source/rest_api.html
+note: >-
+  No official hosted/remote MCP server was found for PowerTrade. This is a CANDIDATE tool list
+  derived from the documented public/private REST endpoints, provided as an MCP starting point.
+  Not an authoritative provider claim.
+server:
+  name: powertrade
+  transport: http
+tools:
+- name: get_currency_summary
+  description: Market-data summary for a currency.
+  source_operation: 'GET /v1/market_data/currency/:id/summary'
+  auth: public
+- name: get_all_currency_summary
+  description: Market-data summary for all currencies.
+  source_operation: 'GET /v1/market_data/currency/all/summary'
+  auth: public
+- name: get_tradeable_entity_summary
+  description: Market-data summary for a tradeable entity (instrument).
+  source_operation: 'GET /v1/market_data/tradeable_entity/:id/summary'
+  auth: public
+- name: get_all_tradeable_entity_summary
+  description: Market-data summary for all tradeable entities.
+  source_operation: 'GET /v1/market_data/tradeable_entity/all/summary'
+  auth: public
+- name: get_public_trades
+  description: Public trade history.
+  source_operation: 'GET /v1/history/trades'
+  auth: public
+- name: get_position_funds
+  description: Account position funds.
+  source_operation: 'GET /v1/position/funds'
+  auth: jwt
+- name: get_position_holdings
+  description: Account position holdings.
+  source_operation: 'GET /v1/position/holdings'
+  auth: jwt
+- name: get_balance_funds_holdings
+  description: Account balance funds and holdings.
+  source_operation: 'GET /v1/balance/funds_holdings'
+  auth: jwt
+- name: get_balance_activity
+  description: Reporting balance-activity history (deposits, withdrawals, settlement, funding).
+  source_operation: 'GET /v1/reporting/balance_activity'
+  auth: jwt

@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://power-trade.github.io/api-docs-source/rest_api.html
+format: http-status
+note: >-
+  PowerTrade's REST reference documents standard HTTP status codes rather than an RFC 9457
+  application/problem+json registry. Captured verbatim from the documented status codes.
+problems:
+- status: 200
+  title: OK
+  meaning: Successful request.
+- status: 401
+  title: Unauthorized
+  meaning: MFA challenge required, or the JWT access token is missing, invalid, or expired.
+  remediation: Generate a fresh ES256 JWT (see authentication) and/or complete the MFA challenge
+    via POST /v2/mfa/verify.
+- status: 403
+  title: Forbidden
+  meaning: MFA method requirements are not met for the requested operation.
+  remediation: Enrol/complete a required MFA method (see GET /v2/mfa/methods).

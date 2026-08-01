@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://support.power.trade/api/authentication.md
+docs: https://support.power.trade/api/authentication.md
+summary:
+  types: [jwt-bearer]
+  scheme: ES256 JWT (JWS)
+  applies_to: all private REST, WebSocket position, and FIX endpoints
+scheme:
+  name: PowerTrade API Key JWT
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  algorithm: ES256
+  key_provisioning: >-
+    Create an account at https://app.power.trade and open Account Profile > API Keys
+    (https://app.power.trade/api-keys) to generate an api_key and private_key.
+  token_generation: >-
+    Sign a JWT with the ES256 algorithm using the private_key. Payload includes sub=api_key,
+    iat, exp, and client="api" (a nonce may be added). A web-based builder is available at
+    https://app.power.trade/jwt-builder.
+  example_payload:
+    sub: "<api_key>"
+    iat: "<unix_seconds>"
+    exp: "<unix_seconds>"
+    client: api
+  libraries_referenced:
+  - {language: python, library: PyJWT, url: https://pyjwt.readthedocs.io/en/stable/}
+  - {language: node, library: jsrsasign, url: https://github.com/kjur/jsrsasign}
+notes: >-
+  Public REST/WebSocket market-data endpoints require no authentication. Private endpoints reject
+  missing/expired JWTs with 401. An MFA challenge (v2/mfa/*) may be required (401 with challenge,
+  403 when MFA method requirements are not met). API access is gated by an API License Agreement
+  and, per the API overview, is currently disabled by default pending provider approval.
