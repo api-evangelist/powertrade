@@ -9,6 +9,18 @@ description: 'PowerTrade (power.trade) is a crypto derivatives exchange offering
   environments and provides Go, Python and TypeScript example clients on GitHub. Backed by
   Pantera Capital.'
 url: https://raw.githubusercontent.com/api-evangelist/powertrade/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
