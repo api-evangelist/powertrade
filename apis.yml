@@ -10,16 +10,19 @@ description: 'PowerTrade (power.trade) is a crypto derivatives exchange offering
   Pantera Capital.'
 url: https://raw.githubusercontent.com/api-evangelist/powertrade/refs/heads/main/apis.yml
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - power-trade/fix-api-clients
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -57,7 +60,7 @@ tags:
 - Perpetual Futures
 - Trading
 - Exchange
-- Financial-Services
+- Financial Services
 - WebSocket
 - FIX
 - Market Data
@@ -74,6 +77,7 @@ tags_raw:
 - WebSocket
 - FIX
 - Market Data
+- Financial-Services
 apis:
 - name: PowerTrade REST API
   description: 'Public and private REST endpoints for market-data summaries, public trade history,
