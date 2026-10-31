@@ -64,6 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PowerTrade is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+PowerTrade (power.trade) is a crypto derivatives exchange offering European-style, USDC-settled options on BTC, ETH and 80+ altcoins, plus perpetual futures, spot, and tokenized equity (xStocks) options. For programmatic traders it publishes a public REST API (market data, history, positions, balances), real-time WebSocket market-data and position feeds, and a FIX 4.4 order-entry / drop-copy gateway. Private endpoints authenticate with an ES256 JWT signed from an account API key and private key. The exchange runs production, test and dev environments and provides Go, Python and TypeScript example clients on GitHub. Backed by Pantera Capital.
 
-Backed by: pantera-capital — https://power.trade/
+**Areas:** Company · Cryptocurrency · Derivatives · Options · Perpetual Futures · Trading · Exchange · Financial Services · WebSocket · FIX · Market Data
+
+## PowerTrade on APIs.io
+
+Everything profiled for PowerTrade is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/powertrade/](https://apis.io/providers/powertrade/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [PowerTrade REST API](https://apis.io/apis/powertrade/powertrade-rest-api/) — Public and private REST endpoints for market-data summaries, public trade history, positions, holdings, balances, reporting, and MFA. Private endpoints…
+- [PowerTrade WebSocket Feeds](https://apis.io/apis/powertrade/powertrade-websocket-feeds/) — Real-time WebSocket market-data feeds (reference data, top-of-book, order books, trades, index and settlement prices) and private position-summary feeds.
+- [PowerTrade FIX API](https://apis.io/apis/powertrade/powertrade-fix-api/) — FIX 4.4 order-entry and drop-copy gateway for order management, with Go example clients published on GitHub.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [powertrade](https://apis.io/servers/powertrade/powertrade/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Powertrade Authentication](https://apis.io/security/powertrade/powertrade-authentication/)
+- [Powertrade Domain Security](https://apis.io/security/powertrade/powertrade-domain-security/)
+- [Powertrade Vulnerability Disclosure](https://apis.io/security/powertrade/powertrade-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://power.trade/)
+- [Documentation](https://power-trade.github.io/api-docs-source/)
+- [Getting started](https://support.power.trade/api/api-overview.md)
+- [API reference](https://power-trade.github.io/api-docs-source/rest_api.html)
+- [Pricing](https://support.power.trade/how-to-use-powertrade/fees.md)
+- [Sign up](https://app.power.trade/)
+- [Support](https://support.power.trade/)
+- [Blog](https://power.trade/blog/)
+- [Security](https://support.power.trade/legal/security/security-policy.md)
+- [Terms of service](https://support.power.trade/legal/legal-and-privacy-policies/terms-of-service.md)
+- [Privacy policy](https://support.power.trade/legal/legal-and-privacy-policies/privacy-policy.md)
+- [GitHub](https://github.com/Power-Trade)
+
+## API Evangelist rating
+
+**Kin Score 33.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 31.6 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 28.7** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/powertrade/](https://apis.io/providers/powertrade/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PowerTrade: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/powertrade/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
